@@ -37,7 +37,7 @@ public class Principal {
 				System.out.print(" [Escolha um das Opções]:   ");
 
 				opc = scan.nextInt();
-						
+					
 			
 			if (opc == 1) {
 				System.out.println(
@@ -52,6 +52,7 @@ public class Principal {
 							+ " Vá a um posto de vacinação o mais rápido possível.");
 					System.out.println(
 							"--------------------------------------------------------------------------------------------------------");
+					
 					System.out.println(" Pesquisar Postos de Vacinação próximo de você."  );
 					System.out.println(
 							"------------------------------------------------------------------------------------------------------");
@@ -59,10 +60,12 @@ public class Principal {
 					postos.setCep(scan.nextLong());
 					System.out.println(
 							"------------------------------------------------------------------------------------------------------");
+					
 					postos.mostrarPostos();
 					System.out.println(
 							"------------------------------------------------------------------------------------------------------");
 				} else {
+					do {
 					System.out.println(" Você possui alguma das comorbidades abaixo?");
 					System.out.println(
 							"--------------------------------------------------------------------------------------------------------");
@@ -72,12 +75,16 @@ public class Principal {
 					pessoa1.setComordidade(scan.nextInt());
 					System.out.println(
 							"--------------------------------------------------------------------------------------------------------");
-
+					}while(pessoa1.getComordidade() != 1 && pessoa1.getComordidade() != 2);
 					if (pessoa1.getComordidade() == 1) {
 						System.out.println(" Você já deveria ter sido vacinado.\n"
 								+ " Vá a um posto de vacinação o mais rápido possível.");
 						System.out.println(
 								"--------------------------------------------------------------------------------------------------------");
+						System.out.println(" Pesquisar Postos de Vacinação próximo de você."  );
+						System.out.println(
+								"------------------------------------------------------------------------------------------------------");
+
 						System.out.print(" [Digite o CEP]:   ");
 						postos.setCep(scan.nextLong());
 						System.out.println(
@@ -87,20 +94,28 @@ public class Principal {
 								"------------------------------------------------------------------------------------------------------");
 
 					} else if (pessoa1.getComordidade() == 2) {
+						do {
 						System.out.println(" Sua profissão se encaixa em alguma dessas Áreas?");
 						System.out.println(
 								"--------------------------------------------------------------------------------------------------------");
-
+						
 						profissao.mostrarAreasPro();
+						System.out.println(
+								"---------------------------------------------------------------------------------------------------------");
 						System.out.print("         [1] SIM       [2] NÃO  :    ");
 						opc = scan.nextInt();
 						System.out.println(
 								"---------------------------------------------------------------------------------------------------------");
+						}while(opc != 1 && opc != 2);
 						if (opc == 1) {
 							System.out.println(" Você já deveria ter sido vacinado.\n"
 									+ " Vá a um posto de vacinação o mais rápido possível.");
 							System.out.println(
 									"------------------------------------------------------------------------------------------------------");
+							System.out.println(" Pesquisar Postos de Vacinação próximo de você."  );
+							System.out.println(
+									"------------------------------------------------------------------------------------------------------");
+
 							System.out.print(" [Digite o CEP]:   ");
 							postos.setCep(scan.nextLong());
 							System.out.println(

@@ -707,10 +707,9 @@ public class PostosVacinacao {
 
 		else {
 			System.out.println(" Cep inválido, Tente novamente!   ");
+						
 		}
-		System.out.println(
-				"------------------------------------------------------------------------------------------------------");
-
+		
 	}
 	
 }

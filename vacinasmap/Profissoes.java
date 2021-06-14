@@ -3,7 +3,7 @@ package br.com.vacinasmap;
 public class Profissoes {
 
 	String[] profissoes = {
-			 "Trabalhador de saúde, indígenas e quilombolas",
+			
 			 "Trabalhador de saúde, indígenas e quilombolas",
 			 "Profissionais de segurança pública  e administração penitenciária",
 			 "Profissionais da educação","Metroviários e ferroviários",
